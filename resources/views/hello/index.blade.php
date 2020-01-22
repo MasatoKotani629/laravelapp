@@ -27,11 +27,17 @@
 
     @include('components.message', ['msg_title'=>'ok','msg_content'=>'サブビューです。']) --}}
 
-    @section('content')
+    {{-- @section('content')
         <p>ここが本文のコンテンツです</p>
         <ul>
             @each('components.item', $data, 'item')
         </ul>
+    @endsection --}}
+
+    @section('content')
+        <p>ここが本文のコンテンツです</p>
+        <p>Controller value<br>'message' = {{$message}}</p>
+        <p>ViewComposer value<br>'view_message' = {{$view_message}}</p>
     @endsection
 
 @endsection
