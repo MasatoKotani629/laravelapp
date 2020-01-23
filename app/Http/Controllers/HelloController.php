@@ -14,12 +14,13 @@ class HelloController extends Controller
     //     return view('hello.index', ['data'=>$data]);
     // }
 
-    public function index(Request $request) {
-        return view('hello.index', ['data'=>$request->data]);
-    }
+    //middleware　前処理
+    // public function index(Request $request) {
+    //     return view('hello.index', ['data'=>$request->data]);
+    // }
 
-    public function post(Request $request) {
-        $data = ['one', 'two', 'three', 'four', 'five', 'six'];
-        return view('hello.index', ['msg'=>$request->msg], ['data'=>$data]);
+    //middleware　後処理
+    public function index(Request $request) {
+        return view('hello.index');
     }
 }
