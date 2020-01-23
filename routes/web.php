@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//ミドルウェア
+//Route::get('hello', 'HelloController@index') ->middleware(HelloMiddleware::class);
+
 Route::get('hello', 'HelloController@index') ->middleware(HelloMiddleware::class);
 
 Route::post('hello', 'HelloController@post');
