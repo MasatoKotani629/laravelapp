@@ -34,10 +34,25 @@
         </ul>
     @endsection --}}
 
-    @section('content')
+    {{-- @section('content')
         <p>ここが本文のコンテンツです</p>
         <p>Controller value<br>'message' = {{$message}}</p>
         <p>ViewComposer value<br>'view_message' = {{$view_message}}</p>
+    @endsection --}}
+
+    {{-- middleware 前処理 --}}
+    {{-- @section('content')
+        <p>ここが本文のコンテンツです/p>
+        <table>
+            @foreach ($data as $item)
+            <tr><th>{{$item['name']}}</th><td>{{ $item['mail'] }}</td></tr>
+            @endforeach
+    @endsection --}}
+
+    {{-- middleware 後処理 --}}
+    @section('content')
+        <p>ここが本文のコンテンツです</p>
+        <p><middleware>google.com</middleware></p>
     @endsection
 
 @endsection
