@@ -14,7 +14,11 @@ class HelloMiddleware
      * @return mixed
      */
     public function handle($request, Closure $next)
-    {
+    {   
+        $data = [
+            ['name'=>'taro', 'mail'=>'taro@com'],
+            ['name'=>'taro', 'mail'=>'taro@com']
+        ];
         return $next($request);
     }
-}
+    }
